@@ -11,7 +11,7 @@ const NavBar = () => {
     <nav className="app__navbar">
       <div className="app__navbar-logo">JeanDEV</div>
       <ul className="app__navbar-links">
-        {['home', 'about', 'footer', 'work', 'skills'].map((item) => (
+        {['home', 'about', 'contact', 'work', 'skills'].map((item) => (
           <li className="app__flex p-text" key={`link-${item}`}>
             <div />
             <a href={`#${item}`}>{item}</a>
@@ -21,10 +21,7 @@ const NavBar = () => {
       <div className="app__navbar-menu">
         <HiMenuAlt4 onClick={() => setToggle(true)} />
         {toggle && (
-          <motion.div
-            animate={{ x: [300, 0] }}
-            transition={{ duration: 1, ease: 'easeOut' }}
-          >
+          <motion.div animate={{ x: [300, 0] }} transition={{ duration: 1, ease: 'easeOut' }}>
             <HiX onClick={() => setToggle(false)} />
             <ul className="app__navbar-links">
               {['home', 'about', 'contact', 'work', 'skills'].map((item) => (
